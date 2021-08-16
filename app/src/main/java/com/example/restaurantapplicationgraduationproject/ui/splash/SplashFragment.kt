@@ -18,7 +18,8 @@ class SplashFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         Handler(Looper.getMainLooper()).postDelayed({
-
+            val action = SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment()
+            findNavController().navigate(action)
         }, 5000)
         return inflater.inflate(R.layout.fragment_splash, container, false)
     }

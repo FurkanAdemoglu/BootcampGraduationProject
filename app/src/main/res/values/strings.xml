@@ -2,4 +2,12 @@
     <string name="app_name">RestaurantApplicationGraduationProject</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="finish">Finish</string>
+    <string name="next">Next</string>
+    <string name="choose_order">Choose Order With Hungrezy</string>
+    <string name="explanation">You can choose meals which is added for the restaurants from application</string>
+    <string name="delivery">Fast Delivery</string>
+    <string name="delivery_explanation">Your orders delivered as fastest as possible for you</string>
+    <string name="enjoy_your_food">Enjoy Your Meal</string>
+    <string name="enjoyMeal">At the end eat your food with family</string>
 </resources>
