@@ -1,15 +1,18 @@
 package com.example.restaurantapplicationgraduationproject.ui.onBoarding
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.restaurantapplicationgraduationproject.R
 import com.example.restaurantapplicationgraduationproject.databinding.FragmentOnboardingBinding
 import com.example.restaurantapplicationgraduationproject.ui.onBoarding.utils.OnBoardingAdapter
 import com.example.restaurantapplicationgraduationproject.ui.onBoarding.utils.ZoomOutPageTransformer
+import com.example.restaurantapplicationgraduationproject.ui.splash.SplashFragmentDirections
 
 class OnBoardingFragment: Fragment() {
     private lateinit var binding: FragmentOnboardingBinding
@@ -48,8 +51,9 @@ class OnBoardingFragment: Fragment() {
                     binding.prevButton.visibility = View.VISIBLE
                     binding.nextButton.text = resources.getText(R.string.finish)
                     binding.nextButton.setOnClickListener {
-                         //SharedPrefManager(requireContext()).setOnboardingSeen()
-                        //findNavController().navigate(R.id.action_onboardingFragment_to_loginAndSignupFragment)
+                        val action = OnBoardingFragmentDirections.actionOnBoardingFragmentToLoginFragment()
+                        findNavController().navigate(action)
+                        onBoardingFinished()
 
                     }
                 } else {
@@ -67,6 +71,13 @@ class OnBoardingFragment: Fragment() {
             }
         })
 
+    }
+
+    private fun onBoardingFinished(){
+        val sharedPref=requireActivity().getSharedPreferences("onBoarding",Context.MODE_PRIVATE)
+        val editor =sharedPref.edit()
+        editor.putBoolean("Finished",true)
+        editor.apply()
     }
 
 }

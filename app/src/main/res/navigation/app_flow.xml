@@ -13,9 +13,21 @@
         <action
             android:id="@+id/action_splashFragment_to_onBoardingFragment"
             app:destination="@id/onBoardingFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.example.restaurantapplicationgraduationproject.ui.onBoarding.OnBoardingFragment"
-        android:label="OnBoardingFragment" />
+        android:label="OnBoardingFragment" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.restaurantapplicationgraduationproject.ui.Login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>
