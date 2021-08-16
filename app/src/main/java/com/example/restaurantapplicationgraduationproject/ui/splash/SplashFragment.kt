@@ -37,4 +37,6 @@ class SplashFragment : Fragment() {
         val sharedPref=requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
         return sharedPref.getBoolean("Finished",false)
     }
+
+
 }

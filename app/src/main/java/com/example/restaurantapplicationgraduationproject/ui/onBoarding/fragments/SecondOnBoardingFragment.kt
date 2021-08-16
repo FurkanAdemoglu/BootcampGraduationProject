@@ -1,4 +1,4 @@
-package com.example.restaurantapplicationgraduationproject.ui.onBoarding
+package com.example.restaurantapplicationgraduationproject.ui.onBoarding.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
-        android:name="com.example.restaurantapplicationgraduationproject.ui.onBoarding.OnBoardingFragment"
+        android:name="com.example.restaurantapplicationgraduationproject.ui.onBoarding.fragments.OnBoardingFragment"
         android:label="OnBoardingFragment" >
         <action
             android:id="@+id/action_onBoardingFragment_to_loginFragment"

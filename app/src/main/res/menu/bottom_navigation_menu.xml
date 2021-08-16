@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/restaurantList"
+        android:enabled="true"
+        android:icon="@drawable/orders"
+        android:title="Orders"/>
+    <item
+        android:id="@+id/search"
+        android:enabled="true"
+        android:icon="@drawable/magnifying_glass"
+        android:title="Search"/>
+
+    <item
+        android:id="@+id/basket"
+        android:enabled="true"
+        android:icon="@drawable/shopping_basket"
+        android:title="Shopping Basket"/>
+
+    <item
+        android:id="@+id/others"
+        android:enabled="true"
+        android:icon="@drawable/others"
+        android:title="Others"/>
+
+</menu>

@@ -1,4 +1,4 @@
-package com.example.restaurantapplicationgraduationproject.ui.onBoarding
+package com.example.restaurantapplicationgraduationproject.ui.onBoarding.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -12,7 +12,6 @@ import com.example.restaurantapplicationgraduationproject.R
 import com.example.restaurantapplicationgraduationproject.databinding.FragmentOnboardingBinding
 import com.example.restaurantapplicationgraduationproject.ui.onBoarding.utils.OnBoardingAdapter
 import com.example.restaurantapplicationgraduationproject.ui.onBoarding.utils.ZoomOutPageTransformer
-import com.example.restaurantapplicationgraduationproject.ui.splash.SplashFragmentDirections
 
 class OnBoardingFragment: Fragment() {
     private lateinit var binding: FragmentOnboardingBinding
