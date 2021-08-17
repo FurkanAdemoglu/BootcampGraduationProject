@@ -44,9 +44,6 @@ class RestaurantDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
-
         viewModel.fetchMealList(args.id!!).observe(viewLifecycleOwner, {
             when (it.status) {
                 Resource.Status.LOADING -> {
