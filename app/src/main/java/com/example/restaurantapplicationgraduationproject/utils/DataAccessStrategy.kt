@@ -13,7 +13,6 @@ fun <T> performNetworkOperation(call: suspend () -> Resource<T>): LiveData<Resou
 
         val networkCall = call.invoke()
 
-
         if(networkCall.status == Resource.Status.SUCCESS){
             val data = networkCall.data!!
             emit(Resource.success(data))

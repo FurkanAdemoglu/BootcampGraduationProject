@@ -1,11 +1,20 @@
 package com.example.restaurantapplicationgraduationproject.data.remote
 
-import com.example.restaurantapplicationgraduationproject.data.entity.restaurants
+import com.example.restaurantapplicationgraduationproject.data.entity.Meals
+import com.example.restaurantapplicationgraduationproject.data.entity.Restaurants
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface NetworkApiService {
 
-    @GET("restaurants/{id}/meals")
-    suspend fun getRestaurants():Response<restaurants>
+    @GET("restaurants/")
+    suspend fun getRestaurants():Response<Restaurants>
+
+    @GET("restaurants/{id}/males")
+    suspend fun getMeals(@Path("id")id:Int):Response<Meals>
+
+
+
 }

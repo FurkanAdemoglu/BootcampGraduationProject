@@ -9,7 +9,11 @@ class ApiRepository @Inject constructor(
 ){
 
     fun getRestaurants() = performNetworkOperation {
-        remoteDataSource.fetchHospitals()
+        remoteDataSource.fetchRestaurants()
+    }
+
+    fun getMeals(id:String)= performNetworkOperation {
+        remoteDataSource.fetchMeals(id)
     }
 
 

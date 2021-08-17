@@ -49,7 +49,7 @@ class NetworkModule {
 
     @Provides
     fun provideEndPoint(): EndPoint {
-        return EndPoint("https://610835a4d73c6400170d38af.mockapi.io/")
+        return EndPoint("https://611977adcbf1b30017eb52f7.mockapi.io/")
     }
 
     @Provides
