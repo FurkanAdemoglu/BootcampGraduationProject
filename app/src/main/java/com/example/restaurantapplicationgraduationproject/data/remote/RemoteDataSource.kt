@@ -10,6 +10,8 @@ class RemoteDataSource @Inject constructor(private val apiService: NetworkApiSer
 
     suspend fun fetchMeals(id:String)=getResult { apiService.getMeals(id.toInt()) }
 
+    suspend fun fetchSearchedRestaurants(search:String)=getResult { apiService.searchRestaurants(search) }
+
 
 
 }

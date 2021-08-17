@@ -15,6 +15,9 @@ interface NetworkApiService {
     @GET("restaurants/{id}/males")
     suspend fun getMeals(@Path("id")id:Int):Response<Meals>
 
+    @GET("restaurants")
+    suspend fun searchRestaurants(@Query("search")searchKey:String):Response<Restaurants>
+
 
 
 }

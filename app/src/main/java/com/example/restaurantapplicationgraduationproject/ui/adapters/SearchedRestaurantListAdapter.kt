@@ -8,27 +8,24 @@ import com.example.restaurantapplicationgraduationproject.data.entity.Restaurant
 import com.example.restaurantapplicationgraduationproject.databinding.ItemRestaurantBinding
 import com.example.restaurantapplicationgraduationproject.ui.listeners.IRestaurantClickListener
 
-class RestaurantListAdapter: RecyclerView.Adapter<RestaurantListAdapter.RestaurantViewHolder>() {
+class SearchedRestaurantListAdapter:RecyclerView.Adapter<SearchedRestaurantListAdapter.SearchedRestaurantViewHolder>() {
 
-        var restaurantList:Restaurants?=null
+    var restaurantList: Restaurants?=null
+    private var listener:IRestaurantClickListener?=null
 
-        private var listener:IRestaurantClickListener?=null
-
-    class RestaurantViewHolder(val binding:ItemRestaurantBinding):RecyclerView.ViewHolder(binding.root) {
-
-        fun bind(RestaurantsItem:RestaurantsItem,listener: IRestaurantClickListener?){
+    class SearchedRestaurantViewHolder(val binding: ItemRestaurantBinding):RecyclerView.ViewHolder(binding.root){
+        fun bind(RestaurantsItem: RestaurantsItem, listener: IRestaurantClickListener?){
             binding.restaurantName.text=RestaurantsItem.name
             binding.restaurantAddress.text=RestaurantsItem.location
             binding.itemRestaurantCardView.setOnClickListener { listener?.onClick(RestaurantsItem) }
         }
-
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): RestaurantViewHolder {
-        return RestaurantViewHolder(
+    ): SearchedRestaurantViewHolder {
+        return SearchedRestaurantViewHolder(
             ItemRestaurantBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
@@ -37,17 +34,14 @@ class RestaurantListAdapter: RecyclerView.Adapter<RestaurantListAdapter.Restaura
         )
     }
 
-    override fun onBindViewHolder(
-        holder: RestaurantViewHolder,
-        position: Int
-    ) {
+    override fun onBindViewHolder(holder: SearchedRestaurantViewHolder, position: Int) {
         restaurantList?.get(position)?.let {
             holder.bind(it,listener)
         }
     }
 
     override fun getItemCount(): Int {
-      return restaurantList!!.size
+        return restaurantList!!.size
     }
 
     fun setData(newList:Restaurants?){
