@@ -17,6 +17,7 @@ import com.example.restaurantapplicationgraduationproject.ui.listeners.IRestaura
 import com.example.restaurantapplicationgraduationproject.utils.Resource
 import com.example.restaurantapplicationgraduationproject.utils.gone
 import com.example.restaurantapplicationgraduationproject.utils.show
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -64,11 +65,15 @@ class RestaurantListFragment : Fragment() {
                 }
             }
         })
+
+
     }
 
     private fun initViews() {
         _binding.hospitalsRecyclerView.adapter = restaurantListAdapter
         _binding.hospitalsRecyclerView.layoutManager = LinearLayoutManager(context)
+
+
 
         restaurantListAdapter.setRestaurantOnClickListener(object : IRestaurantClickListener {
             override fun onClick(name: RestaurantsItem) {
