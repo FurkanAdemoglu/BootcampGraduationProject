@@ -3,6 +3,7 @@ package com.example.restaurantapplicationgraduationproject.ui.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 import com.example.restaurantapplicationgraduationproject.databinding.ItemRestaurantBinding
 import com.example.restaurantapplicationgraduationproject.model.entity.restaurant.Restaurant
@@ -20,6 +21,8 @@ class RestaurantListAdapter : RecyclerView.Adapter<RestaurantListAdapter.Restaur
         fun bind(RestaurantItem: Restaurant, listener: IRestaurantClickListener?) {
             binding.restaurantName.text = RestaurantItem.name
             binding.restaurantAddress.text = RestaurantItem.district
+            Glide.with(binding.restaurantImage.context)
+                .load(RestaurantItem.image).into(binding.restaurantImage)
             binding.itemRestaurantCardView.setOnClickListener { listener?.onClick(RestaurantItem) }
         }
     }
@@ -33,24 +36,20 @@ class RestaurantListAdapter : RecyclerView.Adapter<RestaurantListAdapter.Restaur
             )
         )
     }
-
     override fun onBindViewHolder(holder: RestaurantViewHolder, position: Int) {
         restaurantList?.get(position)?.let {
             holder.bind(it, listener)
         }
     }
-
     override fun getItemCount(): Int {
         return restaurantList!!.size
     }
-
     fun setData(newList: List<Restaurant>?) {
         if (newList != null) {
             restaurantList = newList
         }
         notifyDataSetChanged()
     }
-
     fun setRestaurantOnClickListener(listener: IRestaurantClickListener) {
         this.listener = listener
     }

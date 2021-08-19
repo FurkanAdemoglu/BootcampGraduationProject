@@ -37,6 +37,9 @@ class MainActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.splashFragment -> bottomNav.hide()
                 R.id.restaurantDetailFragment->bottomNav.hide()
+                R.id.mealDetailFragment->bottomNav.hide()
+                R.id.onBoardingFragment->bottomNav.hide()
+                R.id.loginFragment->bottomNav.hide()
 
                 else -> bottomNav.show()
             }

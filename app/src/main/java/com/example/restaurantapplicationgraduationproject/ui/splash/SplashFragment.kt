@@ -20,7 +20,7 @@ class SplashFragment : Fragment() {
         // Inflate the layout for this fragment
         Handler(Looper.getMainLooper()).postDelayed({
 
-            val action=SplashFragmentDirections.actionSplashFragmentToRestaurantListFragment()
+            val action=SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment()
             findNavController().navigate(action)
 
            // val action=SplashFragmentDirections.actionSplashFragmentToRestaurantListFragment()

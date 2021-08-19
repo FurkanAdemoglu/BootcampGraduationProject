@@ -11,8 +11,8 @@
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
-            android:id="@+id/action_splashFragment_to_restaurantListFragment"
-            app:destination="@id/restaurantListFragment" />
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
@@ -26,7 +26,11 @@
         android:id="@+id/loginFragment"
         android:name="com.example.restaurantapplicationgraduationproject.ui.Login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_restaurantListFragment"
+            app:destination="@id/restaurantListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/restaurantListFragment"
         android:name="com.example.restaurantapplicationgraduationproject.ui.restaurantList.RestaurantListFragment"
@@ -43,6 +47,9 @@
             android:name="id"
             app:argType="string"
             app:nullable="true" />
+        <action
+            android:id="@+id/action_restaurantDetailFragment_to_mealDetailFragment"
+            app:destination="@id/mealDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -52,9 +59,18 @@
             android:id="@+id/action_searchFragment_to_restaurantDetailFragment"
             app:destination="@id/restaurantDetailFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/basketFragment"
-        android:name="com.example.restaurantapplicationgraduationproject.ui.basket.BasketFragment"
-        android:label="fragment_basket"
-        tools:layout="@layout/fragment_basket" />
+        android:id="@+id/mealDetailFragment"
+        android:name="com.example.restaurantapplicationgraduationproject.ui.mealDetail.MealDetailFragment"
+        android:label="fragment_meal_detail"
+        tools:layout="@layout/fragment_meal_detail" >
+        <argument
+            android:name="mealId"
+            app:argType="string" />
+        <argument android:name="restaurantId" />
+        <action
+            android:id="@+id/action_mealDetailFragment_to_restaurantListFragment"
+            app:destination="@id/restaurantListFragment" />
+    </fragment>
 </navigation>

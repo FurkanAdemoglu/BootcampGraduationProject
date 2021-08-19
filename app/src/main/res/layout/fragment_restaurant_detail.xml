@@ -8,34 +8,35 @@
 
 
     <ImageView
-        android:id="@+id/imageViewHospital"
+        android:id="@+id/imageViewRestauarnt"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="32dp"
         android:src="@drawable/magnifying_glass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topAppBar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewHospitalName"
+        android:id="@+id/textViewRestaurantName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="@font/opensansregular"
         android:gravity="center"
-        android:text="Hospital Name"
+        android:text="Restaurant Name"
         android:textColor="@color/text"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewHospital" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewRestauarnt" />
 
     <TextView
-        android:id="@+id/textViewHospitalAddress"
+        android:id="@+id/textViewRestaurantAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/opensansregular"
         android:padding="30dp"
         android:text="Address"
@@ -43,17 +44,18 @@
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHospitalName" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantName" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/hospitalsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantAddress" />
 
     <ProgressBar
         android:id="@+id/progressBar"

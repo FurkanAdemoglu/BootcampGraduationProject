@@ -3,6 +3,7 @@ package com.example.restaurantapplicationgraduationproject.ui.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.restaurantapplicationgraduationproject.databinding.ItemMealBinding
 import com.example.restaurantapplicationgraduationproject.model.entity.meal.Meal
 import com.example.restaurantapplicationgraduationproject.ui.listeners.IFoodClickListener
@@ -18,6 +19,8 @@ class FoodListAdapter: RecyclerView.Adapter<FoodListAdapter.FoodListViewHolder>(
         fun bind(meal: Meal, listener: IFoodClickListener?) {
             binding.mealName.text = meal.name
             binding.mealPrice.text = meal.price
+            Glide.with(binding.mealImage.context)
+                .load(meal.image).into(binding.mealImage)
             binding.itemFoodCardView.setOnClickListener { listener?.onClick(meal) }
         }
     }
@@ -37,7 +40,7 @@ class FoodListAdapter: RecyclerView.Adapter<FoodListAdapter.FoodListViewHolder>(
         }
     }
     override fun getItemCount(): Int {
-        return foodList!!.size
+        return foodList.size
     }
     fun setData(newList: ArrayList<Meal>) {
        foodList = newList

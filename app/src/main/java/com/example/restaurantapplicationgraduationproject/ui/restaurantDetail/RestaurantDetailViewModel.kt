@@ -5,6 +5,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.example.restaurantapplicationgraduationproject.model.entity.meal.Meal
 import com.example.restaurantapplicationgraduationproject.model.entity.meal.MealResponse
+import com.example.restaurantapplicationgraduationproject.model.entity.restaurant.RestaurantResponse
 import com.example.restaurantapplicationgraduationproject.repository.ApiRepository
 import com.example.restaurantapplicationgraduationproject.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -17,6 +18,6 @@ class RestaurantDetailViewModel @Inject constructor(
     val savedStateHandle: SavedStateHandle,
     val apiRepository: ApiRepository
 ) : ViewModel() {
-    fun fetchMealList(id:String): LiveData<Resource<MealResponse>> =
-        apiRepository.getMealById(id)
+    fun getRestaurantDetail(id: String): LiveData<Resource<RestaurantResponse>> =
+        apiRepository.getRestaurantById(id)
 }
