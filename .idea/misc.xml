@@ -25,15 +25,23 @@
         <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.3828125" />
         <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.3828125" />
         <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/drawable/ic_baseline_remove_red_eye_24.xml" value="0.3828125" />
+        <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/drawable/ic_info_icon.xml" value="0.3828125" />
+        <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/drawable/ic_repeat_icon.xml" value="0.22135416666666666" />
         <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/drawable/ic_share.xml" value="0.3828125" />
         <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/drawable/login_button.xml" value="0.3828125" />
+        <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/drawable/login_button_background.xml" value="0.22135416666666666" />
         <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/drawable/my_edittext.xml" value="0.3828125" />
         <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/layout/fragment_login.xml" value="0.36666666666666664" />
         <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/layout/fragment_meal_detail.xml" value="0.35260416666666666" />
+        <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/layout/fragment_order.xml" value="0.20520833333333333" />
+        <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/layout/fragment_register.xml" value="0.20520833333333333" />
         <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/layout/fragment_restaurant_detail.xml" value="0.36666666666666664" />
+        <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/layout/fragment_restaurant_list.xml" value="0.20520833333333333" />
         <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/layout/fragment_search.xml" value="0.36666666666666664" />
         <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/layout/item_meal.xml" value="0.36666666666666664" />
+        <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/layout/item_myorders.xml" value="0.20520833333333333" />
         <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/layout/item_restaurant.xml" value="0.36666666666666664" />
+        <entry key="..\:/BootcampGradutionProject/BootcampGraduationProject/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20520833333333333" />
       </map>
     </option>
   </component>

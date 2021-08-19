@@ -30,6 +30,9 @@
         <action
             android:id="@+id/action_loginFragment_to_restaurantListFragment"
             app:destination="@id/restaurantListFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
     <fragment
         android:id="@+id/restaurantListFragment"
@@ -72,5 +75,17 @@
         <action
             android:id="@+id/action_mealDetailFragment_to_restaurantListFragment"
             app:destination="@id/restaurantListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.example.restaurantapplicationgraduationproject.ui.orderList.OrderFragment"
+        android:label="OrderFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.restaurantapplicationgraduationproject.ui.register.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

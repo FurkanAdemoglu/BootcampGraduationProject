@@ -3,6 +3,7 @@ package com.example.restaurantapplicationgraduationproject.repository
 import com.example.restaurantapplicationgraduationproject.model.entity.login.LoginRequest
 import com.example.restaurantapplicationgraduationproject.model.entity.order.OrderAddRequest
 import com.example.restaurantapplicationgraduationproject.model.entity.profile.UserRequest
+import com.example.restaurantapplicationgraduationproject.model.entity.register.RegisterRequest
 import com.example.restaurantapplicationgraduationproject.model.local.LocalDataSource
 import com.example.restaurantapplicationgraduationproject.model.remote.AuthRemoteDataSource
 import com.example.restaurantapplicationgraduationproject.model.remote.RemoteDataSource
@@ -71,5 +72,14 @@ class ApiRepository @Inject constructor(
     fun logOut() {
         localDataSource.saveToken("")
     }
+
+    fun register(request: RegisterRequest) = performAuthTokenNetworkOperation(
+        call = {
+            remoteDataSource.postRegister(request)
+        },
+        saveToken = {
+            localDataSource.saveToken(it)
+        }
+    )
 
 }

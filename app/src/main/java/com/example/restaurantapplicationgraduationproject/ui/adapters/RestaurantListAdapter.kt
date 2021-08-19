@@ -11,7 +11,7 @@ import com.example.restaurantapplicationgraduationproject.ui.listeners.IRestaura
 
 class RestaurantListAdapter : RecyclerView.Adapter<RestaurantListAdapter.RestaurantViewHolder>() {
 
-    lateinit var restaurantList: List<Restaurant>
+     lateinit var restaurantList: List<Restaurant>
 
     private var listener: IRestaurantClickListener? = null
 

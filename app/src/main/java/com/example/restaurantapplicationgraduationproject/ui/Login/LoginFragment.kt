@@ -37,6 +37,11 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        _binding.registerButton.setOnClickListener {
+            val action=LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
+            findNavController().navigate(action)
+        }
+
         _binding.loginButton.setOnClickListener {
             val email = _binding.emailInput.text.toString()
             val password = _binding.inputPassword.text.toString()

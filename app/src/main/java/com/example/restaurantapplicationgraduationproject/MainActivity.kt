@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.mealDetailFragment->bottomNav.hide()
                 R.id.onBoardingFragment->bottomNav.hide()
                 R.id.loginFragment->bottomNav.hide()
+                R.id.registerFragment->bottomNav.hide()
 
                 else -> bottomNav.show()
             }

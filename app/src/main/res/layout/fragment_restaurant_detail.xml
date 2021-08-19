@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="@color/app_background_color">
 
 
     <ImageView
@@ -25,7 +25,7 @@
         android:fontFamily="@font/opensansregular"
         android:gravity="center"
         android:text="Restaurant Name"
-        android:textColor="@color/text"
+        android:textColor="@color/black"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -40,7 +40,7 @@
         android:fontFamily="@font/opensansregular"
         android:padding="30dp"
         android:text="Address"
-        android:textColor="@color/text2"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

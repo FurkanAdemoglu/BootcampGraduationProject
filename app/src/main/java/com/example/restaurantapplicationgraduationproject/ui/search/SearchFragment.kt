@@ -1,7 +1,6 @@
 package com.example.restaurantapplicationgraduationproject.ui.search
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -44,13 +43,11 @@ class SearchFragment : Fragment() {
                 setRestaurants(filterList!!)
                 return true
             }
-
             override fun onQueryTextChange(newText: String?): Boolean {
                 val filterList = viewModel.searchTextOnRestaurantList(newText)
                 setRestaurants(filterList!!)
                 return true
             }
-
         })
         initViews()
     }
@@ -68,7 +65,7 @@ class SearchFragment : Fragment() {
             }
         })
     }
-    private fun setRestaurants(restaurantList: List<Restaurant>) {
+    private fun setRestaurants(restaurantList: List<Restaurant>?) {
         isRestaurantListVisible(restaurantList.isNullOrEmpty().not())
         restaurantListAdapter.setData(restaurantList)
         _binding.rvSearchNews.adapter = restaurantListAdapter
@@ -76,6 +73,5 @@ class SearchFragment : Fragment() {
     private fun isRestaurantListVisible(isVisible: Boolean) {
         _binding.paginationProgressBar.gone()
         _binding.rvSearchNews.isVisible = isVisible
-
     }
 }

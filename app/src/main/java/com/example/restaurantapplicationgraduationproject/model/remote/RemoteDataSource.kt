@@ -1,6 +1,7 @@
 package com.example.restaurantapplicationgraduationproject.model.remote
 
 import com.example.restaurantapplicationgraduationproject.model.entity.login.LoginRequest
+import com.example.restaurantapplicationgraduationproject.model.entity.register.RegisterRequest
 import com.example.restaurantapplicationgraduationproject.utils.BaseDataSource
 import javax.inject.Inject
 
@@ -19,6 +20,8 @@ class RemoteDataSource @Inject constructor(private val apiService: APIService) :
         apiService.login(request)
     }
 
-
+    suspend fun postRegister(request: RegisterRequest) = getResult {
+        apiService.register(request)
+    }
 
 }

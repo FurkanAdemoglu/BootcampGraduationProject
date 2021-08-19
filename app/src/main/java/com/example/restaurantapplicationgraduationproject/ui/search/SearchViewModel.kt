@@ -18,6 +18,11 @@ class SearchViewModel @Inject constructor(
     val apiRepository: ApiRepository
 ) : ViewModel() {
     var restaurantList: List<Restaurant>? = null
+
+    fun getRestaurant(): LiveData<Resource<RestaurantListResponse>> =
+        apiRepository.getRestaurants()
+
+
     fun searchTextOnRestaurantList(text: String?): List<Restaurant>? {
         if (text.isNullOrEmpty())
             return restaurantList
