@@ -10,8 +10,8 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.restaurantapplicationgraduationproject.R
-import com.example.restaurantapplicationgraduationproject.data.entity.RestaurantsItem
 import com.example.restaurantapplicationgraduationproject.databinding.FragmentRestaurantListBinding
+import com.example.restaurantapplicationgraduationproject.model.entity.restaurant.Restaurant
 import com.example.restaurantapplicationgraduationproject.ui.adapters.RestaurantListAdapter
 import com.example.restaurantapplicationgraduationproject.ui.listeners.IRestaurantClickListener
 import com.example.restaurantapplicationgraduationproject.utils.Resource
@@ -39,53 +39,47 @@ class RestaurantListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding.topAppBar.setOnMenuItemClickListener {
-            when (it.itemId) {
 
-                else -> false
-            }
-        }
-
-
-
-        viewModel.fetchHospitalList().observe(viewLifecycleOwner, {
+        viewModel.getRestaurant().observe(viewLifecycleOwner, {
             when (it.status) {
                 Resource.Status.LOADING -> {
                     _binding.progressBar.show()
                 }
                 Resource.Status.SUCCESS -> {
                     _binding.progressBar.gone()
-                    Log.v("HospitalList", "${it.data}")
-                    restaurantListAdapter.setData(it.data)
+                    viewModel.restaurantList = it.data?.restaurantList
+                    setRestaurants(viewModel.restaurantList)
                     initViews()
                 }
                 Resource.Status.ERROR -> {
                     _binding.progressBar.gone()
-                    Log.v("RestaurantList", "${it.data}")
                 }
             }
         })
 
-
     }
+    private fun setRestaurants(restaurantList: List<Restaurant>?) {
+        restaurantListAdapter.setData(restaurantList)
+        _binding.hospitalsRecyclerView.adapter = restaurantListAdapter
+    }
+
+
 
     private fun initViews() {
         _binding.hospitalsRecyclerView.adapter = restaurantListAdapter
         _binding.hospitalsRecyclerView.layoutManager = LinearLayoutManager(context)
 
-
-
         restaurantListAdapter.setRestaurantOnClickListener(object : IRestaurantClickListener {
-            override fun onClick(name: RestaurantsItem) {
+            override fun onClick(name: Restaurant) {
+
+                Log.v("Error", "Error olmuyoooor")
                 val action =
                     RestaurantListFragmentDirections.actionRestaurantListFragmentToRestaurantDetailFragment(
                         name.id
                     )
                 findNavController().navigate(action)
-
             }
         })
     }
-
 
 }

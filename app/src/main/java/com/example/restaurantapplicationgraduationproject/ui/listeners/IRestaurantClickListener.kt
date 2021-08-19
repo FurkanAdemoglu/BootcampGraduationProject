@@ -1,7 +1,7 @@
 package com.example.restaurantapplicationgraduationproject.ui.listeners
 
-import com.example.restaurantapplicationgraduationproject.data.entity.RestaurantsItem
+import com.example.restaurantapplicationgraduationproject.model.entity.restaurant.Restaurant
 
 interface IRestaurantClickListener {
-    fun onClick(name:RestaurantsItem)
+    fun onClick(name:Restaurant)
 }

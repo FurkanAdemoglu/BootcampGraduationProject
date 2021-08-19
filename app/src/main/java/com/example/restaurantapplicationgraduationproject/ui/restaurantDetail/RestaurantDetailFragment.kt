@@ -9,16 +9,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.restaurantapplicationgraduationproject.R
-import com.example.restaurantapplicationgraduationproject.data.entity.Meal
-import com.example.restaurantapplicationgraduationproject.data.entity.RestaurantsItem
 import com.example.restaurantapplicationgraduationproject.databinding.FragmentRestaurantDetailBinding
-import com.example.restaurantapplicationgraduationproject.databinding.FragmentRestaurantListBinding
+import com.example.restaurantapplicationgraduationproject.model.entity.meal.Meal
 import com.example.restaurantapplicationgraduationproject.ui.adapters.FoodListAdapter
-import com.example.restaurantapplicationgraduationproject.ui.adapters.RestaurantListAdapter
-import com.example.restaurantapplicationgraduationproject.ui.listeners.IFoodClickListener
-import com.example.restaurantapplicationgraduationproject.ui.listeners.IRestaurantClickListener
-import com.example.restaurantapplicationgraduationproject.ui.restaurantList.RestaurantListViewModel
 import com.example.restaurantapplicationgraduationproject.utils.Resource
 import com.example.restaurantapplicationgraduationproject.utils.gone
 import com.example.restaurantapplicationgraduationproject.utils.show
@@ -52,7 +45,8 @@ class RestaurantDetailFragment : Fragment() {
                 Resource.Status.SUCCESS -> {
                     _binding.progressBar.gone()
                     Log.v("HospitalList", "${it.data}")
-                    foodListAdapter.setData(it.data)
+
+                    foodListAdapter.setData(arrayListOf(it.data!!.data))
                     initViews()
                 }
                 Resource.Status.ERROR -> {
@@ -67,12 +61,7 @@ class RestaurantDetailFragment : Fragment() {
         _binding.hospitalsRecyclerView.adapter = foodListAdapter
         _binding.hospitalsRecyclerView.layoutManager = LinearLayoutManager(context)
 
-        foodListAdapter.setFoodOnClickListener(object : IFoodClickListener {
-            override fun onClick(name: Meal) {
 
-
-            }
-        })
     }
 
 
