@@ -15,7 +15,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.restaurantapplicationgraduationproject.MainActivity
 import com.example.restaurantapplicationgraduationproject.R
 import com.example.restaurantapplicationgraduationproject.databinding.FragmentRegisterBinding
-import com.example.restaurantapplicationgraduationproject.ui.search.SearchViewModel
 import com.example.restaurantapplicationgraduationproject.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,15 +35,15 @@ class RegisterFragment : Fragment() {
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
-            _binding.registerButton.setOnClickListener {
-                val name = _binding.registerNameTextView.editText?.text.toString()
-                val email = _binding.registerEmailTextView.editText?.text.toString()
-                val password = _binding.registerPasswordTextView.editText?.text.toString()
+            _binding.btnRegister.setOnClickListener {
+                val name = _binding.editTextName.toString()
+                val email = _binding.editTextEmail.toString()
+                val password = _binding.editTextPassword.toString()
 
-                _binding.registerNameTextView.visibility = View.GONE
-                _binding.registerEmailTextView.visibility = View.GONE
-                _binding.registerPasswordTextView.visibility = View.GONE
-                _binding.registerButton.visibility = View.GONE
+                _binding.editTextName.visibility = View.GONE
+                _binding.editTextEmail.visibility = View.GONE
+                _binding.editTextPassword.visibility = View.GONE
+                _binding.btnRegister.visibility = View.GONE
                 _binding.registerAnimation.visibility = View.VISIBLE
                 _binding.registerAnimation.setAnimation(R.raw.loading)
                 _binding.registerAnimation.playAnimation()
@@ -97,14 +96,14 @@ class RegisterFragment : Fragment() {
                                     override fun onAnimationEnd(animation: Animator?) {
 
                                         _binding.registerAnimation.visibility = View.GONE
-                                        _binding.registerNameTextView.visibility = View.VISIBLE
-                                        _binding.registerEmailTextView.visibility = View.VISIBLE
-                                        _binding.registerPasswordTextView.visibility = View.VISIBLE
-                                        _binding.registerButton.visibility = View.VISIBLE
+                                        _binding.editTextName.visibility = View.VISIBLE
+                                        _binding.editTextEmail.visibility = View.VISIBLE
+                                        _binding.editTextPassword.visibility = View.VISIBLE
+                                        _binding.btnRegister.visibility = View.VISIBLE
 
-                                        _binding.registerNameTextView.editText?.text?.clear()
-                                        _binding.registerEmailTextView.editText?.text?.clear()
-                                        _binding.registerPasswordTextView.editText?.text?.clear()
+                                        _binding.editTextName.text?.clear()
+                                        _binding.editTextEmail.text?.clear()
+                                        _binding.editTextPassword.text?.clear()
                                     }
 
                                     override fun onAnimationCancel(animation: Animator?) {

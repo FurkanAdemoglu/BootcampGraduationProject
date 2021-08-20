@@ -10,4 +10,31 @@
     <string name="delivery_explanation">Your orders delivered as fastest as possible for you</string>
     <string name="enjoy_your_food">Enjoy Your Meal</string>
     <string name="enjoyMeal">At the end eat your food with family</string>
+
+
+    <!--Login Screen String-->
+    <string name="loginEmailInput">  Your Email</string>
+    <string name="loginTextUI">Login</string>
+    <string name="loginUIText">Add your details to login</string>
+    <string name="passwordInputLoginUI">Password</string>
+    <string name="loginUIButtonText">Login</string>
+    <string name="textLoginButtonRegister">Register</string>
+
+    <string-array name="Cuisines">
+        <item>Seafood</item>
+        <item>Burger</item>
+        <item>Doner</item>
+        <item>Worldwide</item>
+        <item>Homemade</item>
+        <item>Breakfast</item>
+        <item>Kebab</item>
+        <item>Meatball</item>
+        <item>Pasta - Salad</item>
+        <item>Bakery</item>
+        <item>Pizza</item>
+        <item>Dessert</item>
+        <item>Eastern Kitchen</item>
+    </string-array>
+
+    <string name="all_restaurants">All</string>
 </resources>

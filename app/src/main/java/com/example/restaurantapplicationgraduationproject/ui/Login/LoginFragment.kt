@@ -37,14 +37,14 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _binding.registerButton.setOnClickListener {
+        _binding.btnRegister.setOnClickListener {
             val action=LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
             findNavController().navigate(action)
         }
 
-        _binding.loginButton.setOnClickListener {
-            val email = _binding.emailInput.text.toString()
-            val password = _binding.inputPassword.text.toString()
+        _binding.btnLogin.setOnClickListener {
+            val email = _binding.editTextEmail.text.toString()
+            val password = _binding.editTextPassword.text.toString()
             viewModel.login(email, password).observe(viewLifecycleOwner, Observer {
                     when (it.status) {
                         Resource.Status.LOADING -> {
@@ -53,10 +53,10 @@ class LoginFragment : Fragment() {
                         Resource.Status.SUCCESS -> {
                             //_binding.progressBar.gone()
 
-                            _binding.emailInput.visibility = View.GONE
-                            _binding.inputPassword.visibility = View.GONE
-                           // _binding.forgotPasswordTextView.visibility = View.GONE
-                            _binding.loginButton.visibility = View.GONE
+                            _binding.editTextEmail.visibility = View.GONE
+                            _binding.editTextPassword.visibility = View.GONE
+                           _binding.btnRegister.visibility=View.GONE
+                            _binding.btnLogin.visibility = View.GONE
                             _binding.loginAnimation.visibility = View.VISIBLE
                             _binding.loginAnimation.addAnimatorListener(object :
                                 Animator.AnimatorListener {

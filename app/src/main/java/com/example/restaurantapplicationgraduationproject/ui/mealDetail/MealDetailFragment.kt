@@ -16,6 +16,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.restaurantapplicationgraduationproject.R
 import com.example.restaurantapplicationgraduationproject.databinding.FragmentMealDetailBinding
 import com.example.restaurantapplicationgraduationproject.model.entity.order.OrderAddRequest
+import com.example.restaurantapplicationgraduationproject.ui.adapters.MealIngredientsAdapter
 import com.example.restaurantapplicationgraduationproject.utils.Resource
 import com.example.restaurantapplicationgraduationproject.utils.gone
 import com.example.restaurantapplicationgraduationproject.utils.show
@@ -27,7 +28,7 @@ class MealDetailFragment : Fragment() {
     private val args: MealDetailFragmentArgs by navArgs()
     private val viewModel: MealDetailsViewModel by viewModels()
     private lateinit var _binding: FragmentMealDetailBinding
-   // private var adapter: MealIngredientsAdapter = MealIngredientsAdapter()
+    private var adapter: MealIngredientsAdapter = MealIngredientsAdapter()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -63,8 +64,8 @@ class MealDetailFragment : Fragment() {
                         .load(meal.image).into(_binding.mealImageView)
                     _binding.mealNameTextView.text = meal.name
                     _binding.ingredientsRecyclerView.layoutManager = LinearLayoutManager(context)
-                  //  adapter.setIngredients(meal.ingredients)
-                   // _binding.ingredientsRecyclerView.adapter = adapter
+                    adapter.setIngredients(meal.ingredients)
+                    _binding.ingredientsRecyclerView.adapter = adapter
                     _binding.priceTextView.text = meal.price
 
                     //_binding.homeTextView.text = "Count: ${it.data?.characters?.size}

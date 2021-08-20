@@ -4,23 +4,19 @@
         android:id="@+id/restaurantListFragment"
         android:enabled="true"
         android:icon="@drawable/orders"
-        android:title="Orders"/>
-    <item
-        android:id="@+id/searchFragment"
-        android:enabled="true"
-        android:icon="@drawable/magnifying_glass"
-        android:title="Search"/>
+        android:title="Restaurants"/>
+
 
     <item
         android:id="@+id/orderFragment"
         android:enabled="true"
         android:icon="@drawable/shopping_basket"
-        android:title="Shopping Basket"/>
+        android:title="Orders"/>
 
     <item
-        android:id="@+id/otherFragment"
+        android:id="@+id/profileFragment"
         android:enabled="true"
-        android:icon="@drawable/others"
-        android:title="Others"/>
+        android:icon="@drawable/user"
+        android:title="Profile"/>
 
 </menu>

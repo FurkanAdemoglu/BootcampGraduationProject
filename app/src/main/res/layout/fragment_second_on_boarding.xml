@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange"
+    android:background="@color/loginButtonColor"
     >
 
     <ImageView
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:fontFamily="@font/opensansbolditalic"
+        android:fontFamily="@font/metropolisextrabold"
         android:text="@string/delivery"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -39,7 +39,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="108dp"
         android:layout_marginEnd="24dp"
-        android:fontFamily="@font/opensansregular"
+        android:fontFamily="@font/metropolisregular"
         android:text="@string/delivery_explanation"
         android:textAlignment="center"
         android:textColor="@color/white"

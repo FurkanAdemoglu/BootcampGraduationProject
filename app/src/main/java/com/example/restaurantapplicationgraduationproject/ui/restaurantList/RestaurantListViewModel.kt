@@ -20,4 +20,21 @@ class RestaurantListViewModel @Inject constructor(
 
     fun getRestaurant(): LiveData<Resource<RestaurantListResponse>> =
         apiRepository.getRestaurants()
+
+    fun getRestaurantByCuisine(cuisine: String): LiveData<Resource<RestaurantListResponse>> =
+        apiRepository.getRestaurantByCuisine(cuisine)
+
+    fun searchTextOnRestaurantList(text: String?): List<Restaurant>? {
+        if (text.isNullOrEmpty())
+            return restaurantList
+
+        val filterList: MutableList<Restaurant> = mutableListOf()
+        restaurantList?.forEach { restaurant ->
+            if (restaurant.name.contains(text, true))
+                filterList.add(restaurant)
+            else if (restaurant.district.contains(text, true))
+                filterList.add(restaurant)
+        }
+        return filterList
+    }
 }

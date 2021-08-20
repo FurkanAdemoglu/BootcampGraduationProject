@@ -15,5 +15,9 @@
 
     <color name="toolbarColor">#EC382A</color>
 
+    <color name="editTextBackgroundColor">#F2F2F2</color>
+
+    <!--Login colors-->
+    <color name="loginButtonColor">#FC6011</color>
 
 </resources>
