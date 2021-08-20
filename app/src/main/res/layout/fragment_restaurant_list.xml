@@ -24,7 +24,7 @@
             android:fontFamily="@font/opensansitalic"
             android:padding="5dp"
             android:layout_gravity="center"
-            android:text="Register"
+            android:text="Restaurant List"
             android:textColor="@color/white"
             android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"

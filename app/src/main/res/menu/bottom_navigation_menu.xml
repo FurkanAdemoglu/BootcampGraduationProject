@@ -18,7 +18,7 @@
         android:title="Shopping Basket"/>
 
     <item
-        android:id="@+id/others"
+        android:id="@+id/otherFragment"
         android:enabled="true"
         android:icon="@drawable/others"
         android:title="Others"/>
