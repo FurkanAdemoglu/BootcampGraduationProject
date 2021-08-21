@@ -12,12 +12,8 @@
     <color name="app_background_color">#F4F2F2</color>
     <color name="search_bar">#EFEEEE</color>
     <color name="nav_unselected_color">#ADADAF</color>
-
     <color name="toolbarColor">#EC382A</color>
-
     <color name="editTextBackgroundColor">#F2F2F2</color>
-
-    <!--Login colors-->
     <color name="loginButtonColor">#FC6011</color>
 
 </resources>

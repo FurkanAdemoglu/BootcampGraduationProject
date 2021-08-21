@@ -61,17 +61,14 @@ class RestaurantDetailFragment : Fragment() {
                         .load(restaurant.image).into(_binding.imageViewRestauarnt)
                     _binding.textViewRestaurantName.text = restaurant.name
                     _binding.textViewRestaurantAddress.text=restaurant.district
+                    _binding.textViewRestaurantMenu.text="Menu"
                     foodListAdapter.setData(restaurant.meals)
                     initViews()
                 }
                 Resource.Status.ERROR -> {
                     _binding.progressBar.gone()
                     Log.v("RestaurantList", "${it.data}")
-                }
-            }
-        })
-    }
-
+                } } }) }
     private fun initViews() {
         _binding.hospitalsRecyclerView.adapter = foodListAdapter
         _binding.hospitalsRecyclerView.layoutManager = LinearLayoutManager(context)
@@ -83,12 +80,4 @@ class RestaurantDetailFragment : Fragment() {
                         args.id.toString()
                     )
                 findNavController().navigate(action)
-            }
-
-        })
-
-
-    }
-
-
-}
+            } }) } }

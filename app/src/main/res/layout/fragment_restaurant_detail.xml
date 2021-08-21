@@ -11,9 +11,9 @@
         android:id="@+id/imageViewRestauarnt"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/magnifying_glass"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,41 +21,57 @@
         android:id="@+id/textViewRestaurantName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/opensansregular"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/metropolisregular"
         android:gravity="center"
-        android:text="Restaurant Name"
         android:textColor="@color/black"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewRestauarnt" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewRestauarnt"
+        tools:text="Restaurant Name" />
+
 
     <TextView
         android:id="@+id/textViewRestaurantAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/opensansregular"
-        android:padding="30dp"
-        android:text="Address"
+        android:layout_marginTop="42dp"
+        android:fontFamily="@font/metropolisregular"
+        android:gravity="center"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantName" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantName"
+        tools:text="Restaurant Address" />
+
+    <TextView
+        android:id="@+id/textViewRestaurantMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:fontFamily="@font/metropolisregular"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantAddress" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/hospitalsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewRestaurantMenu" />
 
     <ProgressBar
         android:id="@+id/progressBar"

@@ -1,6 +1,6 @@
 package com.example.restaurantapplicationgraduationproject.ui.mealDetail
 
-import android.content.Intent
+
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -42,7 +42,6 @@ class MealDetailFragment : Fragment() {
         val ingredientsDummy = ArrayList<String>()
         ingredientsDummy.add("ingredient1")
         ingredientsDummy.add("ingredient2")
-
         initViews()
         initListener()
     }
@@ -67,9 +66,6 @@ class MealDetailFragment : Fragment() {
                     adapter.setIngredients(meal.ingredients)
                     _binding.ingredientsRecyclerView.adapter = adapter
                     _binding.priceTextView.text = meal.price
-
-                    //_binding.homeTextView.text = "Count: ${it.data?.characters?.size}
-
                 }
                 Resource.Status.ERROR -> {
                     setLoading(false)
@@ -101,9 +97,6 @@ class MealDetailFragment : Fragment() {
         _binding.backButton.setOnClickListener {
             findNavController().popBackStack()
         }
-
-
-
         _binding.orderButton.setOnClickListener {
             val orderAddRequest = OrderAddRequest(args.restaurantId, args.mealId)
             viewModel.postOrder(orderAddRequest).observe(viewLifecycleOwner, {
@@ -122,11 +115,4 @@ class MealDetailFragment : Fragment() {
                     Resource.Status.ERROR -> {
                         setLoading(false)
                         _binding.ingredientsRecyclerView.show()
-                    }
-                }
-            })
-        }
-
-    }
-
-}
+                    } } }) } } }

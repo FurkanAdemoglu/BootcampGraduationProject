@@ -19,22 +19,50 @@
     <string name="passwordInputLoginUI">Password</string>
     <string name="loginUIButtonText">Login</string>
     <string name="textLoginButtonRegister">Register</string>
+    <string name="loginScreenLogin">Login</string>
+    <string name="loginScreenPleaseEnter">Please enter your account here</string>
+    <string name="loginScreenEmailInput">Your Email</string>
+    <string name="loginScreenPasswordInput">Password</string>
+    <string name="loginScreenLoginButton">Login</string>
+    <string name="loginScreenDontAccount">Don\'t you have an account?</string>
+    <string name="loginScreenRegisterText">Register</string>
 
     <string-array name="Cuisines">
-        <item>Seafood</item>
+        <item>Fish</item>
         <item>Burger</item>
-        <item>Doner</item>
-        <item>Worldwide</item>
-        <item>Homemade</item>
         <item>Breakfast</item>
         <item>Kebab</item>
-        <item>Meatball</item>
-        <item>Pasta - Salad</item>
+        <item>Salad</item>
+        <item>Pasta</item>
         <item>Bakery</item>
         <item>Pizza</item>
         <item>Dessert</item>
-        <item>Eastern Kitchen</item>
     </string-array>
 
     <string name="all_restaurants">All</string>
+
+    <!--Splash  Screen String-->
+    <string name="appName">Yiyeceksepeti</string>
+
+    <!--Meal Detail Screen String-->
+    <string name="mealDetailTotal">TOTAL</string>
+    <string name="orderNowButtonString">ORDER NOW</string>
+
+    <!--Last Order Screen String-->
+    <string name="lastOrderString">Last Orders</string>
+
+    <!--Restaurant List Screen String-->
+    <string name="restaurantListScreen">Restaurant List</string>
+
+    <!--Register  Screen String-->
+    <string name="registerScreenRegisterText">Register</string>
+    <string name="registerScreenPleaseEnter">Please enter your informations for register</string>
+    <string name="registerScreenPasword">Password</string>
+    <string name="registerScreenEmail">Email</string>
+    <string name="registerScreenName">Name</string>
+    <string name="registerScreenButton">Register</string>
+    <string name="onBoardingNextButtonText">Next</string>
+    <string name="onBoardingPrevButtonText">Prev</string>
+    <string name="restaurantListScreenNotFoundText">Not Found</string>
+
 </resources>

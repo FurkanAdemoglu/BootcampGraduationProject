@@ -28,17 +28,14 @@ import dagger.hilt.android.AndroidEntryPoint
             binding = FragmentOrderBinding.inflate(inflater, container, false)
             return binding?.root
         }
-
         override fun onDestroyView() {
             super.onDestroyView()
             binding = null
         }
-
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
             getOrders()
         }
-
         private fun getOrders() {
             viewModel.getOrders().observe(viewLifecycleOwner, { response ->
                 when (response.status) {
@@ -51,19 +48,12 @@ import dagger.hilt.android.AndroidEntryPoint
                             binding?.orderRecyclerView?.adapter = adapter
                             adapter.setOrderList(it)
                             setLoading(false)
-                        }
-
-                    }
-
+                        } }
                     Resource.Status.ERROR -> {
                         println("${response.message}")
                         Log.v("order",response.toString())
                         setLoading(false)
-                    }
-                }
-            })
-        }
-
+                    } } }) }
         private fun setLoading(isLoading: Boolean) {
             if(isLoading)
             {
@@ -74,6 +64,4 @@ import dagger.hilt.android.AndroidEntryPoint
             {
                 binding?.orderProgressBar?.gone()
                 binding?.orderRecyclerView?.show()
-            }
-        }
-    }
+            } } }

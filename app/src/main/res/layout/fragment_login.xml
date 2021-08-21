@@ -7,11 +7,11 @@
 
 
     <TextView
-        android:id="@+id/textWelcome"
+        android:id="@+id/textLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Login"
+        android:text="@string/loginScreenLogin"
         android:fontFamily="@font/metropolisextrabold"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,12 +25,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/metropolisregular"
-        android:text="Please enter your account here"
+        android:text="@string/loginScreenPleaseEnter"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textWelcome" />
+        app:layout_constraintTop_toBottomOf="@+id/textLogin" />
 
     <EditText
         android:id="@+id/editTextEmail"
@@ -44,7 +44,7 @@
         android:backgroundTint="@color/editTextBackgroundColor"
         android:fontFamily="@font/metropolisregular"
         android:drawablePadding="10dp"
-        android:hint="Your Email"
+        android:hint="@string/loginScreenEmailInput"
         android:inputType="textEmailAddress"
         android:padding="18dp"
         android:paddingStart="20dp"
@@ -68,7 +68,7 @@
         android:backgroundTint="@color/editTextBackgroundColor"
         android:fontFamily="@font/metropolisregular"
         android:drawablePadding="10dp"
-        android:hint="Password"
+        android:hint="@string/loginScreenPasswordInput"
         android:inputType="textPassword"
         android:padding="18dp"
         android:paddingStart="20dp"
@@ -90,7 +90,7 @@
         android:layout_marginEnd="45dp"
         android:background="@drawable/et_border"
         android:padding="15dp"
-        android:text="Login"
+        android:text="@string/loginScreenLoginButton"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp"
@@ -106,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Don't you have an account?"
+        android:text="@string/loginScreenDontAccount"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -122,7 +122,7 @@
         android:layout_marginEnd="45dp"
         android:background="@drawable/et_border"
         android:padding="15dp"
-        android:text="Register"
+        android:text="@string/loginScreenRegisterText"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp"
@@ -144,6 +144,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="false"
-        app:lottie_rawRes="@raw/success"
+        app:lottie_rawRes="@raw/loginsuccess"
         app:lottie_repeatCount="0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

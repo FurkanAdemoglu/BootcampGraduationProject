@@ -17,14 +17,10 @@ class SplashFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         Handler(Looper.getMainLooper()).postDelayed({
 
-            val action=SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment()
+            val action=SplashFragmentDirections.actionSplashFragmentToLoginFragment()
             findNavController().navigate(action)
-
-           // val action=SplashFragmentDirections.actionSplashFragmentToRestaurantListFragment()
-            //findNavController().navigate(action)
 
             if(onBoardingFinished()){
                // val action = SplashFragmentDirections.actionSplashFragmentToLoginFragment()

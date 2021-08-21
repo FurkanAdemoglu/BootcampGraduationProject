@@ -39,11 +39,8 @@ class RegisterFragment : Fragment() {
                 val name = _binding.editTextName.toString()
                 val email = _binding.editTextEmail.toString()
                 val password = _binding.editTextPassword.toString()
+                    viewGones()
 
-                _binding.editTextName.visibility = View.GONE
-                _binding.editTextEmail.visibility = View.GONE
-                _binding.editTextPassword.visibility = View.GONE
-                _binding.btnRegister.visibility = View.GONE
                 _binding.registerAnimation.visibility = View.VISIBLE
                 _binding.registerAnimation.setAnimation(R.raw.loading)
                 _binding.registerAnimation.playAnimation()
@@ -53,11 +50,8 @@ class RegisterFragment : Fragment() {
                     .observe(viewLifecycleOwner, Observer {
                         when (it.status) {
                             Resource.Status.LOADING -> {
-                                //_binding.progressBar.show()
                             }
                             Resource.Status.SUCCESS -> {
-                                //_binding.progressBar.gone()
-
                                 _binding.registerAnimation.setAnimation(R.raw.success)
                                 _binding.registerAnimation.playAnimation()
                                 _binding.registerAnimation.addAnimatorListener(object :
@@ -65,26 +59,16 @@ class RegisterFragment : Fragment() {
                                     override fun onAnimationStart(animation: Animator?) {
                                         Log.v("Animation", "Started")
                                     }
-
                                     override fun onAnimationEnd(animation: Animator?) {
-
                                         val action=RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
                                         findNavController().navigate(action)
                                     }
-
                                     override fun onAnimationCancel(animation: Animator?) {
                                         Log.v("Animation", "Canceled")
                                     }
-
                                     override fun onAnimationRepeat(animation: Animator?) {
-                                        Log.v("Animation", "Repeated")
-                                    }
-
-                                })
-
-                            }
+                                        Log.v("Animation", "Repeated") } }) }
                             Resource.Status.ERROR -> {
-                                //_binding.progressBar.gone()
                                 _binding.registerAnimation.setAnimation(R.raw.fail)
                                 _binding.registerAnimation.playAnimation()
                                 _binding.registerAnimation.addAnimatorListener(object :
@@ -92,40 +76,35 @@ class RegisterFragment : Fragment() {
                                     override fun onAnimationStart(animation: Animator?) {
                                         Log.v("Animation", "Started")
                                     }
-
                                     override fun onAnimationEnd(animation: Animator?) {
-
                                         _binding.registerAnimation.visibility = View.GONE
-                                        _binding.editTextName.visibility = View.VISIBLE
-                                        _binding.editTextEmail.visibility = View.VISIBLE
-                                        _binding.editTextPassword.visibility = View.VISIBLE
-                                        _binding.btnRegister.visibility = View.VISIBLE
-
+                                        viewVisibleAnimation()
                                         _binding.editTextName.text?.clear()
                                         _binding.editTextEmail.text?.clear()
                                         _binding.editTextPassword.text?.clear()
                                     }
-
                                     override fun onAnimationCancel(animation: Animator?) {
                                         Log.v("Animation", "Canceled")
                                     }
-
                                     override fun onAnimationRepeat(animation: Animator?) {
                                         Log.v("Animation", "Repeated")
-                                    }
-
-                                })
+                                    } })
                                 val dialog = AlertDialog.Builder(context)
                                     .setTitle("Error")
                                     .setMessage("${it.message}")
                                     .setPositiveButton("Try Again!") { dialog, button ->
                                         dialog.dismiss()
                                     }
-                                dialog.show()
-                            }
-                        }
-                    })
-            }
-        }
-
+                                dialog.show() } } }) } }
+    private fun viewGones(){
+        _binding.editTextName.visibility = View.GONE
+        _binding.editTextEmail.visibility = View.GONE
+        _binding.editTextPassword.visibility = View.GONE
+        _binding.btnRegister.visibility = View.GONE
     }
+    private fun viewVisibleAnimation(){
+        _binding.editTextName.visibility = View.VISIBLE
+        _binding.editTextEmail.visibility = View.VISIBLE
+        _binding.editTextPassword.visibility = View.VISIBLE
+        _binding.btnRegister.visibility = View.VISIBLE
+    } }

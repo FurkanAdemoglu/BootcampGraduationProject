@@ -21,12 +21,11 @@ class RestaurantListAdapter : RecyclerView.Adapter<RestaurantListAdapter.Restaur
         fun bind(RestaurantItem: Restaurant, listener: IRestaurantClickListener?) {
             binding.restaurantName.text = RestaurantItem.name
             binding.restaurantAddress.text = RestaurantItem.district
-            Glide.with(binding.restaurantImage.context)
-                .load(RestaurantItem.image).into(binding.restaurantImage)
+            Glide.with(binding.imageView.context)
+                .load(RestaurantItem.image).into(binding.imageView)
             binding.itemRestaurantCardView.setOnClickListener { listener?.onClick(RestaurantItem) }
         }
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantViewHolder {
         return RestaurantViewHolder(
             ItemRestaurantBinding.inflate(

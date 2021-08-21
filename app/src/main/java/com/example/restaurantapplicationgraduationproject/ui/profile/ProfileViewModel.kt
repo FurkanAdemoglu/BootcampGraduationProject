@@ -18,7 +18,6 @@ class ProfileViewModel @Inject constructor(
     fun logOut() {
         apiRepository.logOut()
     }
-
     fun getUser(): LiveData<Resource<UserResponse>> = apiRepository.getUser()
 
 }

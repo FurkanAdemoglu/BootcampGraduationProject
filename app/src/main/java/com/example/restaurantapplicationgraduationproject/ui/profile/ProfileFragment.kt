@@ -94,7 +94,7 @@ class ProfileFragment : Fragment() {
         _binding.mailTextView.text = user?.email
         _binding.phoneNumberTextView.text = user?.phone
         _binding.addressTextView.text = user?.address
-//        _binding.profilePhotoImageView.setImageResource(getImageResource(user?.profileImage))
+       _binding.profilePhotoImageView.setImageResource(getImageResource(user?.profileImage))
     }
 
     private fun addListeners() {
