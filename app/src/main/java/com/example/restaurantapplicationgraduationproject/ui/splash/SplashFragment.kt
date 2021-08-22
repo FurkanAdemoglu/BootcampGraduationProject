@@ -19,16 +19,14 @@ class SplashFragment : Fragment() {
     ): View? {
         Handler(Looper.getMainLooper()).postDelayed({
 
-            val action=SplashFragmentDirections.actionSplashFragmentToLoginFragment()
-            findNavController().navigate(action)
 
             if(onBoardingFinished()){
-               // val action = SplashFragmentDirections.actionSplashFragmentToLoginFragment()
-                //findNavController().navigate(action)
+                val action = SplashFragmentDirections.actionSplashFragmentToLoginFragment()
+                findNavController().navigate(action)
             }
             else{
-               // val action = SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment()
-                //findNavController().navigate(action)
+              val action = SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment()
+                findNavController().navigate(action)
             }
 
         }, 5000)

@@ -16,14 +16,9 @@ class MealIngredientsAdapter :
         private val ingredientTextView: TextView = view.findViewById(R.id.ingredientTextView)
 
         fun setIngredient(ingredient: String) {
-
-
             ingredientTextView.text = ingredient
-
         }
     }
-
-
     fun setIngredients(ingredientList: ArrayList<String>) {
         this.ingredients = ingredientList
         notifyDataSetChanged()

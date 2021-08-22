@@ -15,10 +15,8 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.restaurantapplicationgraduationproject.R
 import com.example.restaurantapplicationgraduationproject.databinding.FragmentRestaurantDetailBinding
 import com.example.restaurantapplicationgraduationproject.model.entity.meal.Meal
-import com.example.restaurantapplicationgraduationproject.model.entity.restaurant.Restaurant
 import com.example.restaurantapplicationgraduationproject.ui.adapters.FoodListAdapter
 import com.example.restaurantapplicationgraduationproject.ui.listeners.IFoodClickListener
-import com.example.restaurantapplicationgraduationproject.ui.restaurantList.RestaurantListFragmentDirections
 import com.example.restaurantapplicationgraduationproject.utils.Resource
 import com.example.restaurantapplicationgraduationproject.utils.gone
 import com.example.restaurantapplicationgraduationproject.utils.show

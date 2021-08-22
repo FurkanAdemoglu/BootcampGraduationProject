@@ -2,9 +2,8 @@
     <string name="app_name">RestaurantApplicationGraduationProject</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="finish">Finish</string>
-    <string name="next">Next</string>
-    <string name="choose_order">Choose Order With Hungrezy</string>
+
+    <string name="choose_order">Choose Order With Yiyeceksepeti</string>
     <string name="explanation">You can choose meals which is added for the restaurants from application</string>
     <string name="delivery">Fast Delivery</string>
     <string name="delivery_explanation">Your orders delivered as fastest as possible for you</string>
@@ -28,11 +27,11 @@
     <string name="loginScreenRegisterText">Register</string>
 
     <string-array name="Cuisines">
-        <item>Fish</item>
+        <item>Seafood</item>
         <item>Burger</item>
         <item>Breakfast</item>
         <item>Kebab</item>
-        <item>Salad</item>
+        <item>Pasta - Salad</item>
         <item>Pasta</item>
         <item>Bakery</item>
         <item>Pizza</item>
@@ -53,6 +52,7 @@
 
     <!--Restaurant List Screen String-->
     <string name="restaurantListScreen">Restaurant List</string>
+    <string name="restaurantListScreenNotFoundText">Not Found</string>
 
     <!--Register  Screen String-->
     <string name="registerScreenRegisterText">Register</string>
@@ -61,8 +61,16 @@
     <string name="registerScreenEmail">Email</string>
     <string name="registerScreenName">Name</string>
     <string name="registerScreenButton">Register</string>
+
+    <!--OnBoarding  Screen String-->
     <string name="onBoardingNextButtonText">Next</string>
     <string name="onBoardingPrevButtonText">Prev</string>
-    <string name="restaurantListScreenNotFoundText">Not Found</string>
+    <string name="finish">Finish</string>
+    <string name="next">Next</string>
+    <string name="completeProfilePhone">Phone</string>
+    <string name="completeAddressEdittext">Address</string>
+    <string name="completeUIText">Complete Profile</string>
+    <string name="completeProfileUpdateText">Update Profile Informations</string>
+    <string name="completeProfileButtonText">Update Profile</string>
 
 </resources>

@@ -11,6 +11,9 @@
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+        <action
             android:id="@+id/action_splashFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
@@ -94,7 +97,18 @@
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
-            android:id="@+id/action_profileFragment_to_splashFragment"
-            app:destination="@id/splashFragment" />
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_completeFragment"
+            app:destination="@id/completeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/completeFragment"
+        android:name="com.example.restaurantapplicationgraduationproject.ui.completeProfile.CompleteFragment"
+        android:label="CompleteFragment" >
+        <action
+            android:id="@+id/action_completeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
 </navigation>

@@ -45,7 +45,6 @@ class MealDetailFragment : Fragment() {
         initViews()
         initListener()
     }
-
     private fun initViews() {
         viewModel.getMealDetails(args.mealId).observe(viewLifecycleOwner, {
             when (it.status) {
@@ -69,10 +68,7 @@ class MealDetailFragment : Fragment() {
                 }
                 Resource.Status.ERROR -> {
                     setLoading(false)
-                }
-            }
-        })
-    }
+                } } }) }
 
     private fun setLoading(isLoading: Boolean) {
         if (isLoading) {

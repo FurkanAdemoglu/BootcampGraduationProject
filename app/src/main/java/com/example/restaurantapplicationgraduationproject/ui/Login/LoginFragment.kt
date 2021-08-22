@@ -55,7 +55,6 @@ class LoginFragment : Fragment() {
                                 override fun onAnimationStart(animation: Animator?) {
                                     Log.v("Animation", "Started")
                                 }
-
                                 override fun onAnimationEnd(animation: Animator?) {
 
                                     val action=LoginFragmentDirections.actionLoginFragmentToRestaurantListFragment()
@@ -69,7 +68,6 @@ class LoginFragment : Fragment() {
                                 override fun onAnimationRepeat(animation: Animator?) {
                                     Log.v("Animation", "Repeated")
                                 }
-
                             })
                         }
                         Resource.Status.ERROR -> {
@@ -81,7 +79,10 @@ class LoginFragment : Fragment() {
                                     dialog.dismiss()
                                 }
                             dialog.show()
-                        } }}) } }
+                        } }}) }
+
+
+    }
 
     private fun viewGones(){
         _binding.editTextEmail.visibility = View.GONE

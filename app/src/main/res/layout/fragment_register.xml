@@ -33,27 +33,27 @@
         app:layout_constraintTop_toBottomOf="@+id/textWelcome" />
 
     <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="35dp"
-        android:layout_weight="15"
-        android:background="@drawable/et_border"
-        android:backgroundTint="@color/editTextBackgroundColor"
-        android:drawablePadding="10dp"
-        android:hint="@string/registerScreenName"
-        android:inputType="textPersonName"
-        android:padding="18dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textSize="15sp"
-        android:fontFamily="@font/metropolisregular"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEnterAccount" />
+    android:id="@+id/editTextName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="35dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="35dp"
+    android:layout_weight="15"
+    android:background="@drawable/et_border"
+    android:backgroundTint="@color/editTextBackgroundColor"
+    android:drawablePadding="10dp"
+    android:hint="@string/registerScreenName"
+    android:inputType="textPersonName"
+    android:padding="18dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:textSize="15sp"
+    android:fontFamily="@font/metropolisregular"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textViewEnterAccount" />
 
 
     <EditText
@@ -119,7 +119,7 @@
         android:fontFamily="@font/metropolisregular"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:backgroundTint="@color/loginButtonColor"
+        app:backgroundTint="@color/mainColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -136,6 +136,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="false"
-        app:lottie_rawRes="@raw/loading"
+        app:lottie_rawRes="@raw/registersuccess"
         app:lottie_repeatCount="0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
