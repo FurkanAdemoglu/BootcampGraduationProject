@@ -29,6 +29,8 @@ Yiyeceksepeti is an Android Application which restaurants can send their meals a
 
 ![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) Glide
 
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) Bottom Navigation
+
 ## Splash Viewpagers Flow
 
 <img src="https://user-images.githubusercontent.com/52356960/130366237-ead37215-0c5c-4a3e-b160-c8ef1e85cf17.gif" width="250" height="500" />
