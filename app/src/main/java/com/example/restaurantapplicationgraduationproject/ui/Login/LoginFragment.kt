@@ -81,9 +81,7 @@ class LoginFragment : Fragment() {
                             dialog.show()
                         } }}) }
 
-
     }
-
     private fun viewGones(){
         _binding.editTextEmail.visibility = View.GONE
         _binding.textLogin.visibility=View.GONE
