@@ -1,44 +1,49 @@
 # Yiyeceksepeti Bootcamp Graduation Project
-Yiyeceksepeti is an Android Application Restaurants can send their meals and users can order the products.
-<!--Table of Contents-->
+Yiyeceksepeti is an Android Application which restaurants can send their meals and users can order the products like yemeksepeti.
 
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-      </ul>
-    </li>
-    <li>
-      <a href="#Features">Pages</a>
-</ol>
-</details>
+## Technologies which I used
 
-## Technologies which we used
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) MVVM architecture
 
-![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) MVVM architecture
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Dagger Hilt
 
-![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) Dagger Hilt
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Retrofit
 
-![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) Retrofit
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Coroutine
 
-![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) Coroutine
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) MongoDB Atlas
 
-![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) MongoDB Atlas
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Heroku
 
-![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) Heroku
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Navigation
 
-![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) Navigation
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) ViewBinding
 
-![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) ViewBinding
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) ViewPager2
 
-![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) ViewPager2
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Recyclerview
 
-![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) Recyclerview
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Lottie
 
-![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) Lottie
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Fragment
 
-| Login Register  | User Flow | Admin Flow |
-| ------------- | ------------- | ------------- |
-|  <img src="https://user-images.githubusercontent.com/71497349/129103798-1a46e2ee-79ed-4fe0-8a84-9c500a086323.gif" width="250" height="500" /> | <img src="https://user-images.githubusercontent.com/71497349/129106603-7ee9a1e3-4cea-4f89-aaea-f5b9a52be94b.gif" width="250" height="500" />  | <img src="https://user-images.githubusercontent.com/71497349/129105034-ce7b2088-058a-4f9f-bce6-c46b15178be0.gif" width="250" height="500" /> |
+![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Glide
+
+## Splash Viewpagers Flow
+
+<img src="https://user-images.githubusercontent.com/52356960/130366237-ead37215-0c5c-4a3e-b160-c8ef1e85cf17.gif" width="250" height="500" />
+
+## Login Register Flow
+
+<img src="https://user-images.githubusercontent.com/52356960/130366293-ce664fb8-6f72-42c0-869a-6589fbb54117.gif" width="250" height="500" />
+
+## Restaurant List, Restaurant Detail, Food Detail
+
+<img src="https://user-images.githubusercontent.com/52356960/130366413-2c57b6a6-4c49-48e1-8b5c-b00f3c2ba9ea.gif" width="250" height="500" />
+
+## Order List, Profile Screen, Update Profile
+
+<img src="https://user-images.githubusercontent.com/52356960/130366477-c2b54503-19a4-4c56-94ec-f0b60c00a8ac.gif" width="250" height="500" />
+
+
+
