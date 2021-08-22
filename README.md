@@ -3,31 +3,31 @@ Yiyeceksepeti is an Android Application which restaurants can send their meals a
 
 ## Technologies which I used
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) MVVM architecture
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) MVVM architecture
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Dagger Hilt
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) Dagger Hilt
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Retrofit
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) Retrofit
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Coroutine
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) Coroutine
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) MongoDB Atlas
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) MongoDB Atlas
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Heroku
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) Heroku
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Navigation
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) Navigation
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) ViewBinding
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) ViewBinding
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) ViewPager2
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) ViewPager2
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Recyclerview
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) Recyclerview
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Lottie
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) Lottie
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Fragment
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) Fragment
 
-![#FC6011](https://via.placeholder.com/15/00A651/000000?text=+) Glide
+![#FC6011](https://via.placeholder.com/15/FC6011/000000?text=+) Glide
 
 ## Splash Viewpagers Flow
 
